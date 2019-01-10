@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using LitmosApi.Models;
+﻿using LitmosApi.Models;
 using RestSharp;
+using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace LitmosApi
 {
-     public partial class LitmosApiClient
+    [SuppressMessage("ReSharper", "UnusedMember.Global")]
+    public partial class LitmosClient
     {
+        [SuppressMessage("ReSharper", "UnusedMember.Global")]
         public Users GetUsers(string search = null)
         {
             var request = new RestRequest(Method.GET)

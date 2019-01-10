@@ -3,17 +3,22 @@ using System;
 
 namespace LitmosApi
 {
-    public partial class LitmosApiClient
+    public partial class LitmosClient
     {
         private readonly LitmosConfiguration _configuration;
         public const string BaseUrl = "https://api.litmos.com/v1.svc/";
 
-        public LitmosApiClient(LitmosConfiguration configuration)
+        public LitmosClient(string apiKey)
+        : this(new LitmosConfiguration() { ApiKey = apiKey })
+        {
+        }
+
+        public LitmosClient(LitmosConfiguration configuration)
         {
             _configuration = configuration;
         }
 
-        public T Get<T>(RestRequest request) where T : new()
+        protected T Get<T>(RestRequest request) where T : new()
         {
             var client = new RestClient
             {
