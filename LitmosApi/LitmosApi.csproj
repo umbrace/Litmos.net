@@ -2,6 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>dampee</Authors>
+    <Company>Dampee bvba</Company>
+    <RepositoryUrl>https://github.com/umbrace/Litmos.net</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/umbrace/Litmos.net</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/umbrace/Litmos.net/blob/master/LICENSE</PackageLicenseUrl>
+    <Description>An Api for the litmos e-learning platform</Description>
+    <PackageTags>e-learning litmos</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
