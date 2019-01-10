@@ -6,7 +6,7 @@ using System.Diagnostics.CodeAnalysis;
 namespace LitmosApi
 {
     [SuppressMessage("ReSharper", "UnusedMember.Global")]
-    public partial class LitmosClient
+    public partial class LitmosClient : ILitmosClient
     {
         [SuppressMessage("ReSharper", "UnusedMember.Global")]
         public Users GetUsers(string search = null)
