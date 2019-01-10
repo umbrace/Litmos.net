@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LitmosApi", "LitmosApi\LitmosApi.csproj", "{6BA4B74B-0D90-4C51-B806-D8A9C5517309}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LitmosApi", "LitmosApi\LitmosApi.csproj", "{6BA4B74B-0D90-4C51-B806-D8A9C5517309}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{BB0E248F-A7B0-4281-A75D-49CB3D08E09F}"
+	ProjectSection(SolutionItems) = preProject
+		appveyor.yml = appveyor.yml
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
