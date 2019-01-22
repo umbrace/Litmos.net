@@ -1,10 +1,11 @@
-﻿using LitmosApi.Models;
+﻿using System.Collections.Generic;
+using LitmosApi.Models;
 
 namespace LitmosApi
 {
     public interface ILitmosClient
     {
-        Users GetUsers(string search = null);
+        List<User> GetUsers(string search = null);
 
         /// <summary>
         /// Gets the user.
