@@ -25,7 +25,7 @@ namespace LitmosApi
                 BaseUrl = new System.Uri(BaseUrl)
             };
             request.AddOrUpdateParameter("apikey", _configuration.ApiKey, ParameterType.QueryString);
-            request.AddOrUpdateParameter("source", "litmosDotNetSdk", ParameterType.QueryString);
+            request.AddOrUpdateParameter("source", _configuration.Source, ParameterType.QueryString);
 
             var response = client.Get<T>(request);
 
