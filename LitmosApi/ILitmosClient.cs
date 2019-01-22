@@ -5,7 +5,7 @@ namespace LitmosApi
 {
     public interface ILitmosClient
     {
-        List<User> GetUsers(string search = null);
+        List<User> GetUsers(string search = null, int limit= 100, bool showInactive = false);
 
         /// <summary>
         /// Gets the user.
