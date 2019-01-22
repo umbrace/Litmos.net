@@ -17,15 +17,12 @@
     - choco install gitversion.portable -pre -y
   assembly_info:
     patch: false
-#  after_build:
-#    - cmd: ECHO nuget pack <Project>\<NuSpec>.nuspec -version "%GitVersion_NuGetVersion%" -prop "target=%CONFIGURATION%"
-#    - cmd: nuget pack <Project>\<NuSpec>.nuspec -version "%GitVersion_NuGetVersion%" -prop "target=%CONFIGURATION%"
-#    - cmd: appveyor PushArtifact "<NuSpec>.%GitVersion_NuGetVersion%.nupkg"    
   build:
     project: LitmosApi\LitmosApi.csproj
   before_build:
     - dotnet restore
-    - ps: gitversion /l console /output buildserver /updateAssemblyInfo
+    - ps: .\build.ps1
+    - ps: gitversion /l console /output buildserver /updateAssemblyInfo /b (get-item env:APPVEYOR_REPO_BRANCH).Value
   dotnet_csproj:
     patch: true
     file: '**\*.csproj'
@@ -39,6 +36,7 @@
     project: LitmosApi\LitmosApi.csproj
   before_build:
     - dotnet restore
+    - ps: .\build.ps1
   dotnet_csproj:
     patch: true
     file: '**\*.csproj'

@@ -1,5 +1,4 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -11,10 +10,9 @@
     <PackageLicenseUrl>https://github.com/umbrace/Litmos.net/blob/master/LICENSE</PackageLicenseUrl>
     <Description>An Api for the litmos e-learning platform</Description>
     <PackageTags>e-learning litmos</PackageTags>
+    <Version>1.0.11</Version>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="RestSharp" Version="106.6.5" />
   </ItemGroup>
-
 </Project>
