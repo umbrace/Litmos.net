@@ -5,6 +5,9 @@
 
 A csharp implementation for Litmos e-learning
 
+## breaking change from earlier versions
+Renamed LitmosApiClient to LitmosClient
+
 ## Implemented
 
 * users / all users
@@ -25,3 +28,4 @@ litmosConfig.ApiKey = ConfigurationManager.AppSettings["litmos:ApiKey"];
 
 var litmosClient = new LitmosClient(litmosConfig);
 ```
+
