@@ -1,6 +1,7 @@
 ﻿using LitmosApi.Models;
 using RestSharp;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 
 namespace LitmosApi
@@ -9,7 +10,7 @@ namespace LitmosApi
     public partial class LitmosClient : ILitmosClient
     {
         [SuppressMessage("ReSharper", "UnusedMember.Global")]
-        public Users GetUsers(string search = null)
+        public List<User> GetUsers(string search = null)
         {
             var request = new RestRequest(Method.GET)
             {
@@ -20,7 +21,7 @@ namespace LitmosApi
                 request.AddParameter("search", search, ParameterType.QueryString);
             }
 
-            return Get<Users>(request);
+            return Get<List<User>>(request);
         }
 
         /// <summary>
