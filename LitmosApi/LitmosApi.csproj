@@ -15,7 +15,4 @@
   <ItemGroup>
     <PackageReference Include="RestSharp" Version="106.6.5" />
   </ItemGroup>
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy /y/s &quot;$(ProjectDir)bin\*.*&quot; &quot;C:\Users\damiaan\Projects\i3-technologies-website\Site\bin\&quot;" />
-  </Target>
 </Project>
